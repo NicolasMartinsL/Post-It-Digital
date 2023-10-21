@@ -16,4 +16,4 @@ JavaScript
 
 
 <h2>Objetivo:</h2>
-Criar um sistema simples de cadastro de lembretes diarios, ordenando tudo com dias, horarios e ordem de prioridade.
+Desenvolver um sistema de cadastro de lembretes diários com JavaScript, permitindo a organização por datas, horários e prioridades, visando facilitar o gerenciamento de tarefas e compromissos.
