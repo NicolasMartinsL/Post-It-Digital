@@ -9,7 +9,9 @@ JavaScript
 <h2>Objetivo:</h2>
 O objetivo deste trabalho de faculdade é criar um sistema de cadastro de lembretes diários usando JavaScript. O sistema permitirá aos usuários inserir lembretes com datas, horários e prioridades específicas. A proposta visa simplificar a organização e gerenciamento de tarefas e compromissos, proporcionando uma solução prática e eficaz.
 
-*<h2>Integrantes:</h2>
+
+
+<h2>Integrantes:</h2>
 Gabriel Alderige</br>
 Gabriel Majeau</br>
 Lerry Henrique</br>
