@@ -8,10 +8,10 @@ function createStickyNote() {
     note.id = "note_" + noteId;
     note.innerHTML = `
         <div class="header">
-            <span class="delete" onclick="deleteStickyNote('${note.id}')">Delete</span>
+            <span class="delete" onclick="deleteStickyNote('${note.id}')">Deletar</span>
         </div>
-        <div class="content" contenteditable="true" onclick="hidePlaceholder(this)">Click and type here!</div>
-        <input type="color" class="color-picker" onchange="changeNoteColor('${note.id}', this.value)">
+        <div class="content" contenteditable="true" onclick="hidePlaceholder(this)">Digite aqui!</div>
+        <input type="color" value="#ffffff" class="color-picker" onchange="changeNoteColor('${note.id}', this.value)">
     `
      saveNotesToLocalStorage();
 
@@ -22,7 +22,7 @@ function createStickyNote() {
 }
 
 function hidePlaceholder(element) {
-    if (element.innerText === "Click and type here!") {
+    if (element.innerText === "Digite aqui!") {
         element.innerText = "";
        saveNotesToLocalStorage();
     }
@@ -101,7 +101,7 @@ function loadNotesFromLocalStorage() {
             newNote.id = note.id;
             newNote.innerHTML = `
                 <div class="header">
-                    <button class="delete" onclick="deleteStickyNote('${note.id}')" contenteditable="false">Delete</button>
+                    <button class="delete" onclick="deleteStickyNote('${note.id}')" contenteditable="false">Deletar</button>
                 </div>
                 <div class="content" contenteditable="true">${note.content}</div>
                 <input type="color" class="color-picker" onchange="changeNoteColor('${note.id}', this.value)" value="${note.color}">
