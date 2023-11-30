@@ -8,9 +8,9 @@ function createStickyNote() {
     note.id = "note_" + noteId;
     note.innerHTML = `
         <div class="header">
-            <span class="delete" onclick="deleteStickyNote('${note.id}')">Deletar</span>
+            <span class="delete" onclick="deleteStickyNote('${note.id}')">X</span>
         </div>
-        <div class="content" contenteditable="true" onclick="hidePlaceholder(this)">Digite aqui!</div>
+        <div class="content" contenteditable="true" onclick="hidePlaceholder(this)" style="margin-top:10px; margin-bottom:10px;" >Digite aqui!</div>
         <input type="color" value="#ffffff" class="color-picker" onchange="changeNoteColor('${note.id}', this.value)">
     `
      saveNotesToLocalStorage();
@@ -101,9 +101,9 @@ function loadNotesFromLocalStorage() {
             newNote.id = note.id;
             newNote.innerHTML = `
                 <div class="header">
-                    <button class="delete" onclick="deleteStickyNote('${note.id}')" contenteditable="false">Deletar</button>
+                    <button class="delete" onclick="deleteStickyNote('${note.id}')" contenteditable="false">X</button>
                 </div>
-                <div class="content" contenteditable="true">${note.content}</div>
+                <div class="content" contenteditable="true" style="margin-top:10px; margin-bottom:10px;">${note.content}</div>
                 <input type="color" class="color-picker" onchange="changeNoteColor('${note.id}', this.value)" value="${note.color}">
             `;
             newNote.style.top = note.top;
