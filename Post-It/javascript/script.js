@@ -43,9 +43,9 @@ function startDrag(event) {
 
     function dragNote(event) {
         if (event.target.tagName.toLowerCase() === 'input' || event.target.tagName.toLowerCase() === 'textarea') {
-            return; // Prevent dragging if the target is an input element
+            return; 
         }
-        event.preventDefault(); // Prevent text selection
+        event.preventDefault(); 
         const newNoteX = event.clientX - offsetX;
         const newNoteY = event.clientY - offsetY;
         note.style.left = newNoteX + "px";
@@ -85,7 +85,7 @@ function saveNotesToLocalStorage() {
         content: note.querySelector(".content").innerText,
         top: note.style.top,
         left: note.style.left,
-        color: note.querySelector(".color-picker").value // Retrieve color value from the color picker
+        color: note.querySelector(".color-picker").value 
     }));
     localStorage.setItem("stickyNotes", JSON.stringify(notesArray));
 }
@@ -108,7 +108,7 @@ function loadNotesFromLocalStorage() {
             `;
             newNote.style.top = note.top;
             newNote.style.left = note.left;
-            newNote.style.backgroundColor = note.color; // Set background color
+            newNote.style.backgroundColor = note.color;
             newNote.addEventListener("mousedown", startDrag);
             container.appendChild(newNote);
         });
